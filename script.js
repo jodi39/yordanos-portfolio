@@ -5,11 +5,12 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // ---- Typing Animation ----
-  const titles = [
-    "Full-Stack Developer",
-    "UI/UX Designer",
-    "AI Integration Specialist",
-  ];
+    const titles = [
+        'Frontend Developer',
+        'Full-Stack Engineer',
+        'UI/UX Designer',
+        'AI Integration Specialist'
+    ];
   const typedText = document.getElementById("typed-text");
   let titleIndex = 0;
   let charIndex = 0;
