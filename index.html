@@ -62,8 +62,8 @@
       },
       "knowsAbout": ["Vue.js", "JavaScript", "NestJS", "Node.js", "MongoDB", "Figma", "UI/UX Design", "AI Integration", "Tailwind CSS", "REST APIs"],
       "sameAs": [
-        "https://linkedin.com",
-        "https://github.com"
+        "https://www.linkedin.com/in/yordanos-hagos-83b878349",
+        "https://github.com/jodi39"
       ]
     }
     </script>
@@ -801,7 +801,7 @@
             </div>
             <div class="contact-socials">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/yordanos-hagos-83b878349"
                 target="_blank"
                 rel="noopener"
                 class="social-link"
@@ -814,7 +814,7 @@
                 </svg>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/jodi39"
                 target="_blank"
                 rel="noopener"
                 class="social-link"
@@ -828,22 +828,25 @@
               </a>
             </div>
           </div>
-          <form class="contact-form reveal reveal-delay-1" id="contact-form">
+          <form class="contact-form reveal reveal-delay-1" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
             <div class="form-group">
-              <input type="text" id="form-name" placeholder=" " required />
+              <input type="text" id="form-name" name="name" placeholder=" " required />
               <label for="form-name">Your Name</label>
             </div>
             <div class="form-group">
-              <input type="email" id="form-email" placeholder=" " required />
+              <input type="email" id="form-email" name="email" placeholder=" " required />
               <label for="form-email">Your Email</label>
             </div>
             <div class="form-group">
-              <input type="text" id="form-subject" placeholder=" " />
+              <input type="text" id="form-subject" name="subject" placeholder=" " />
               <label for="form-subject">Subject</label>
             </div>
             <div class="form-group">
               <textarea
                 id="form-message"
+                name="message"
                 rows="5"
                 placeholder=" "
                 required
@@ -896,7 +899,7 @@
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/yordanos-hagos-83b878349"
               target="_blank"
               rel="noopener"
               title="LinkedIn"
@@ -908,7 +911,7 @@
               </svg>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/jodi39"
               target="_blank"
               rel="noopener"
               title="GitHub"

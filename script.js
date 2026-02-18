@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(updateCounter);
   }
 
-  // ---- Contact Form (Visual Only) ----
+  // ---- Contact Form (Netlify Forms) ----
   const contactForm = document.getElementById("contact-form");
 
   contactForm.addEventListener("submit", (e) => {
@@ -171,20 +171,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const btn = contactForm.querySelector(".btn");
     const originalHTML = btn.innerHTML;
+    const formData = new FormData(contactForm);
 
-    btn.innerHTML = `
+    // Disable button during submission
+    btn.disabled = true;
+    btn.innerHTML = `<span>Sending...</span>`;
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then((response) => {
+        if (response.ok) {
+          btn.innerHTML = `
             <span>Message Sent!</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
-        `;
-    btn.style.background = "linear-gradient(135deg, #34d399, #06b6d4)";
-
-    setTimeout(() => {
-      btn.innerHTML = originalHTML;
-      btn.style.background = "";
-      contactForm.reset();
-    }, 3000);
+          `;
+          btn.style.background = "linear-gradient(135deg, #34d399, #06b6d4)";
+          contactForm.reset();
+        } else {
+          throw new Error("Form submission failed");
+        }
+      })
+      .catch(() => {
+        btn.innerHTML = `<span>Error — please try again</span>`;
+        btn.style.background = "linear-gradient(135deg, #ef4444, #f97316)";
+      })
+      .finally(() => {
+        btn.disabled = false;
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.style.background = "";
+        }, 3000);
+      });
   });
 
   // ---- Smooth Scroll for anchor links ----
