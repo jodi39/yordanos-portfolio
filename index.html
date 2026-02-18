@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yordanos Hagos — Full-Stack Developer, UI/UX Designer & AI Integration Specialist. Building clean, scalable, and high-performance digital products."
+    />
+    <meta
+      name="keywords"
+      content="Yordanos Hagos, Full-Stack Developer, UI/UX Designer, AI Integration, Vue.js, NestJS, Portfolio"
+    />
+    <meta name="author" content="Yordanos Hagos" />
+    <title>Yordanos Hagos — Full-Stack Developer & UI/UX Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>YH<span class="logo-bracket">
+            /&gt;</span
+          >
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow hero-glow--1"></div>
+      <div class="hero-glow hero-glow--2"></div>
+      <div class="hero-glow hero-glow--3"></div>
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+      </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Yordanos Hagos</h1>
+          <div class="hero-title-wrapper">
+            <span class="hero-title-prefix">I'm a&nbsp;</span>
+            <span class="hero-title" id="typed-text"></span>
+            <span class="cursor">|</span>
+          </div>
+          <p class="hero-description">
+            Building clean, scalable, and high-performance digital products that
+            solve real-world problems with modern technology and AI.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number" data-count="3">0</span
+              ><span class="stat-plus">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number" data-count="1">0</span
+              ><span class="stat-plus">+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number" data-count="10">0</span
+              ><span class="stat-plus">+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="avatar-ring">
+            <div class="avatar-ring-inner">
+              <div class="avatar-placeholder">
+                <svg
+                  viewBox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="100"
+                    cy="80"
+                    r="40"
+                    fill="url(#grad1)"
+                    opacity="0.9"
+                  />
+                  <ellipse
+                    cx="100"
+                    cy="160"
+                    rx="55"
+                    ry="35"
+                    fill="url(#grad1)"
+                    opacity="0.9"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="grad1"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" style="stop-color: #a78bfa" />
+                      <stop offset="100%" style="stop-color: #06b6d4" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="orbit-icons">
+            <div class="orbit-icon orbit-icon--1" title="Vue.js">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M2 3h3.5L12 14.5 18.5 3H22L12 21 2 3zm7 0h2l3 5.2L17 3h2L12 14.2 9 3z"
+                />
+              </svg>
+            </div>
+            <div class="orbit-icon orbit-icon--2" title="JavaScript">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3 3h18v18H3V3zm4.73 15.04c.4.85 1.19 1.55 2.54 1.55 1.5 0 2.53-.79 2.53-2.42v-5.2h-1.63v5.16c0 .8-.33 1.02-.84 1.02-.52 0-.73-.35-.97-.77l-1.13.66zm5.98-.18c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8z"
+                />
+              </svg>
+            </div>
+            <div class="orbit-icon orbit-icon--3" title="Figma">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M5 5.5A3.5 3.5 0 018.5 2H12v7H8.5A3.5 3.5 0 015 5.5zM12 2h3.5a3.5 3.5 0 110 7H12V2zm0 12.5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm1-5a3.5 3.5 0 107 0 3.5 3.5 0 00-7 0zM5 12.5A3.5 3.5 0 018.5 9H12v3.5a3.5 3.5 0 01-7 0z"
+                />
+              </svg>
+            </div>
+            <div class="orbit-icon orbit-icon--4" title="AI">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 110 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 11-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 110-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2zm0 7a5 5 0 00-5 5 5 5 0 005 5 5 5 0 005-5 5 5 0 00-5-5zm0 2a3 3 0 013 3 3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <div class="mouse">
+          <div class="mouse-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// about me</span>
+          <h2 class="section-title">Know Me Better</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text reveal">
+            <p class="about-description">
+              I'm a <strong>Frontend Developer</strong> and
+              <strong>UI/UX Designer</strong> with professional experience
+              building <strong>AI-powered</strong> and production-ready web
+              applications. I've designed fintech dashboards, rental platform
+              systems, and developed an AI-integrated
+              <strong>Adaptive Learning Platform</strong> aligned with the
+              Ethiopian curriculum.
+            </p>
+            <p class="about-description">
+              Skilled in <strong>Vue.js</strong>, modern UI architecture, and
+              <strong>AI feature integration</strong>, I am passionate about
+              creating clean, scalable, and high-performance digital products
+              that solve real-world problems.
+            </p>
+            <div class="about-details">
+              <div class="detail-item">
+                <span class="detail-label">Name</span>
+                <span class="detail-value">Yordanos Hagos</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Email</span>
+                <span class="detail-value">yordina2323@gmail.com</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Ethiopia</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Availability</span>
+                <span class="detail-value available"
+                  >Open to opportunities</span
+                >
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">
+              <span>Let's Talk</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+          <div class="about-highlights reveal reveal-delay-1">
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <h3>Full-Stack Dev</h3>
+              <p>Vue.js + NestJS for complete web solutions</p>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                  <path d="M2 2l7.586 7.586" />
+                  <circle cx="11" cy="11" r="2" />
+                </svg>
+              </div>
+              <h3>UI/UX Design</h3>
+              <p>Figma-based design systems & prototyping</p>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 110 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 11-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 110-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"
+                  />
+                </svg>
+              </div>
+              <h3>AI Integration</h3>
+              <p>LLM APIs, RAG systems & AI coaching</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// my skills</span>
+          <h2 class="section-title">Technologies & Tools</h2>
+        </div>
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Component Architecture</span>
+              <span class="skill-tag">REST API Integration</span>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="skill-category reveal reveal-delay-1">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="2" y="2" width="20" height="8" rx="2" />
+                  <rect x="2" y="14" width="20" height="8" rx="2" />
+                  <circle cx="6" cy="6" r="1" />
+                  <circle cx="6" cy="18" r="1" />
+                </svg>
+              </div>
+              <h3>Backend Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">NestJS</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">MongoDB</span>
+            </div>
+          </div>
+          <!-- AI -->
+          <div class="skill-category reveal reveal-delay-2">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 110 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 11-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 110-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"
+                  />
+                </svg>
+              </div>
+              <h3>AI Integration</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">LLM API Integration</span>
+              <span class="skill-tag">RAG Systems</span>
+              <span class="skill-tag">AI Coaching Systems</span>
+              <span class="skill-tag">AI Q&A & Summarization</span>
+            </div>
+          </div>
+          <!-- Design -->
+          <div class="skill-category reveal reveal-delay-1">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <circle cx="13.5" cy="6.5" r="2.5" />
+                  <path
+                    d="M17.1 12.2A7 7 0 001 12.73L3 20h4l1-4 4 8 3-8 2.56 4H22l-4.9-7.8z"
+                  />
+                </svg>
+              </div>
+              <h3>Design</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">UI/UX Research</span>
+              <span class="skill-tag">Wireframing & Prototyping</span>
+              <span class="skill-tag">Design Systems</span>
+              <span class="skill-tag">Dashboard Design</span>
+            </div>
+          </div>
+          <!-- Tools -->
+          <div class="skill-category reveal reveal-delay-2">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"
+                  />
+                </svg>
+              </div>
+              <h3>Tools</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">VS Code</span>
+            </div>
+          </div>
+          <!-- Soft Skills -->
+          <div class="skill-category reveal">
+            <div class="skill-category-header">
+              <div class="skill-category-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                  <path d="M16 3.13a4 4 0 010 7.75" />
+                </svg>
+              </div>
+              <h3>Soft Skills</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Analytical Thinking</span>
+              <span class="skill-tag">Collaboration & Teamwork</span>
+              <span class="skill-tag">Attention to Detail</span>
+              <span class="skill-tag">Adaptability</span>
+              <span class="skill-tag">Continuous Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// experience</span>
+          <h2 class="section-title">Work Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">
+                    Full-Stack Developer
+                    <span class="accent">(AI Integration)</span>
+                  </h3>
+                  <p class="timeline-company">Vite Technologies</p>
+                </div>
+                <span class="timeline-date">Sep 2025 — Jan 2026</span>
+              </div>
+              <ul class="timeline-details">
+                <li>
+                  Built an AI-powered Adaptive Learning Platform using Vue.js
+                  and NestJS
+                </li>
+                <li>
+                  Integrated AI coaching, Q&A generation, and automated
+                  summaries using LLM APIs
+                </li>
+                <li>
+                  Developed curriculum-aligned system for Ethiopian Grades 9–12
+                </li>
+                <li>Implemented REST APIs and MongoDB database structure</li>
+                <li>
+                  Deployed applications to Netlify and optimized frontend
+                  performance
+                </li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Vue.js</span><span>NestJS</span><span>MongoDB</span
+                ><span>AI/LLM</span><span>REST API</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">UI/UX Designer</h3>
+                  <p class="timeline-company">Vite Technologies</p>
+                </div>
+                <span class="timeline-date">Sep 2024 — Jun 2025</span>
+              </div>
+              <ul class="timeline-details">
+                <li>
+                  Designed payment gateway dashboards for financial transaction
+                  management
+                </li>
+                <li>Created full rental platform web design systems</li>
+                <li>Developed scalable design systems in Figma</li>
+                <li>Ensured responsive and user-centered interface design</li>
+                <li>
+                  Collaborated with developers for pixel-perfect implementation
+                </li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Figma</span><span>UI/UX</span><span>Design Systems</span
+                ><span>Prototyping</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card reveal">
+            <div class="project-card-image">
+              <div class="project-placeholder project-placeholder--1">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                >
+                  <path
+                    d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1.27c.34-.6.99-1 1.73-1a2 2 0 110 4c-.74 0-1.39-.4-1.73-1H20a7 7 0 01-7 7v1.27c.6.34 1 .99 1 1.73a2 2 0 11-4 0c0-.74.4-1.39 1-1.73V23a7 7 0 01-7-7H2.73c-.34.6-.99 1-1.73 1a2 2 0 110-4c.74 0 1.39.4 1.73 1H4a7 7 0 017-7V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"
+                  />
+                </svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-view">View Details</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-label">AI · Full-Stack · Education</div>
+              <h3 class="project-card-title">
+                AI-Powered Adaptive Learning System
+              </h3>
+              <p class="project-card-description">
+                A production-ready learning platform for Ethiopian Grades 9–12
+                with AI coaching, automated Q&A generation, and personalized
+                lesson summaries.
+              </p>
+              <div class="project-tech">
+                <span>Vue.js</span>
+                <span>NestJS</span>
+                <span>MongoDB</span>
+                <span>AI / LLM</span>
+              </div>
+              <ul class="project-features">
+                <li>Responsive student dashboard</li>
+                <li>AI coaching assistant for personalized learning</li>
+                <li>Automated Q&A and lesson summaries</li>
+                <li>Optimized for Ethiopian curriculum</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-card-image">
+              <div class="project-placeholder project-placeholder--2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-view">View Details</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-label">Frontend · Fintech · UI</div>
+              <h3 class="project-card-title">Payment Gateway Dashboard UI</h3>
+              <p class="project-card-description">
+                A clean, component-based financial transaction dashboard with
+                reusable UI components and a structured layout system built for
+                scalability.
+              </p>
+              <div class="project-tech">
+                <span>Vue.js</span>
+                <span>Tailwind CSS</span>
+              </div>
+              <ul class="project-features">
+                <li>Financial transaction dashboards</li>
+                <li>Reusable UI components</li>
+                <li>Structured layout system for scalability</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-card-image">
+              <div class="project-placeholder project-placeholder--3">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-view">View Details</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-label">Design · UX · Real Estate</div>
+              <h3 class="project-card-title">Rental Platform Web Design</h3>
+              <p class="project-card-description">
+                A modern rental marketplace UI design with dashboard and booking
+                interface, focused on user flow optimization and clean UI
+                structure.
+              </p>
+              <div class="project-tech">
+                <span>Figma</span>
+                <span>Responsive Design</span>
+              </div>
+              <ul class="project-features">
+                <li>Modern rental marketplace UI</li>
+                <li>Dashboard and booking interface</li>
+                <li>User flow optimization</li>
+                <li>Clean UI structure</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section class="section education" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// education</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <div class="education-card reveal">
+          <div class="education-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+          </div>
+          <div class="education-info">
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p class="education-school">Mekelle Institute of Technology</p>
+            <span class="education-date">Expected Graduation: 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// get in touch</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <span class="contact-card-label">Email</span>
+                <a
+                  href="mailto:yordina2323@gmail.com"
+                  class="contact-card-value"
+                  >yordina2323@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span class="contact-card-label">Phone</span>
+                <a href="tel:+251908836661" class="contact-card-value"
+                  >+251 908 836 661</a
+                >
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <span class="contact-card-label">Location</span>
+                <span class="contact-card-value">Ethiopia</span>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+                title="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener"
+                class="social-link"
+                title="GitHub"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form reveal reveal-delay-1" id="contact-form">
+            <div class="form-group">
+              <input type="text" id="form-name" placeholder=" " required />
+              <label for="form-name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="form-email" placeholder=" " required />
+              <label for="form-email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="form-subject" placeholder=" " />
+              <label for="form-subject">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea
+                id="form-message"
+                rows="5"
+                placeholder=" "
+                required
+              ></textarea>
+              <label for="form-message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <a href="#hero" class="footer-logo">
+            <span class="logo-bracket">&lt;</span>YH<span class="logo-bracket">
+              /&gt;</span
+            >
+          </a>
+          <p class="footer-text">
+            Designed & Built by Yordanos Hagos &copy; 2026
+          </p>
+          <div class="footer-socials">
+            <a href="mailto:yordina2323@gmail.com" title="Email">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener"
+              title="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              title="GitHub"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
