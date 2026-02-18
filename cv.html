@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yordanos Hagos — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ============ RESET & BASE ============ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #6d28d9;
+      --primary-light: #8b5cf6;
+      --accent: #0891b2;
+      --text: #1e1e2e;
+      --text-secondary: #4a4a5e;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --bg-light: #f8f7ff;
+    }
+
+    html { font-size: 14px; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--text);
+      background: #f3f4f6;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ============ PAGE CONTAINER ============ */
+    .page {
+      max-width: 794px; /* A4 width */
+      margin: 24px auto;
+      background: white;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    @media print {
+      html { font-size: 12.5px; }
+      body {
+        background: white;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+      }
+    }
+
+    /* ============ HEADER ============ */
+    .header {
+      background: linear-gradient(135deg, #1e1b4b, #312e81);
+      color: white;
+      padding: 36px 40px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: rgba(139, 92, 246, 0.15);
+      border-radius: 50%;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .header .title {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #c4b5fd;
+      margin-bottom: 16px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      font-size: 0.85rem;
+      color: #e0e7ff;
+    }
+
+    .contact-bar a {
+      color: #e0e7ff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-bar a:hover {
+      color: #a78bfa;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-item svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* ============ BODY ============ */
+    .body {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 0;
+    }
+
+    .main {
+      padding: 28px 32px 32px 40px;
+      border-right: 1px solid var(--border);
+    }
+
+    .sidebar {
+      padding: 28px 32px 32px 24px;
+      background: var(--bg-light);
+    }
+
+    /* ============ SECTIONS ============ */
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+
+    /* ============ PROFILE ============ */
+    .profile-text {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ============ EXPERIENCE ============ */
+    .exp-item {
+      margin-bottom: 18px;
+      page-break-inside: avoid;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+      gap: 12px;
+    }
+
+    .exp-role {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .exp-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      white-space: nowrap;
+      background: rgba(109, 40, 217, 0.06);
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+
+    .exp-company {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .exp-details {
+      list-style: none;
+    }
+
+    .exp-details li {
+      position: relative;
+      padding-left: 16px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 3px;
+      line-height: 1.6;
+    }
+
+    .exp-details li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-size: 0.75rem;
+    }
+
+    /* ============ PROJECTS ============ */
+    .project-item {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .project-tech-list {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ============ EDUCATION ============ */
+    .edu-degree {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .edu-school {
+      font-size: 0.88rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .edu-date {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* ============ SIDEBAR SKILLS ============ */
+    .skill-group {
+      margin-bottom: 16px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .skill-tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(109, 40, 217, 0.07);
+      color: var(--text-secondary);
+      border: 1px solid rgba(109, 40, 217, 0.12);
+    }
+
+    /* ============ SIDEBAR TOOLS ============ */
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .tool-tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(8, 145, 178, 0.07);
+      color: var(--text-secondary);
+      border: 1px solid rgba(8, 145, 178, 0.12);
+    }
+
+    /* ============ SOFT SKILLS ============ */
+    .soft-skill-list {
+      list-style: none;
+    }
+
+    .soft-skill-list li {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding: 2px 0;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .soft-skill-list li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-size: 0.5rem;
+      top: 6px;
+    }
+
+    /* ============ LANGUAGES ============ */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding: 2px 0;
+    }
+
+    .lang-level {
+      font-weight: 500;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    /* ============ PRINT HELPERS ============ */
+    @media print {
+      .section { break-inside: avoid; }
+      .body { grid-template-columns: 1fr 240px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- :::::: HEADER :::::: -->
+    <header class="header">
+      <div class="header-content">
+        <h1>Yordanos Hagos</h1>
+        <div class="title">Frontend Developer · Full-Stack Engineer · UI/UX Designer</div>
+        <div class="contact-bar">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:yordina2323@gmail.com">yordina2323@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+251908836661">+251 908 836 661</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <a href="https://www.linkedin.com/in/yordanos-hagos-83b878349" target="_blank">LinkedIn</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/jodi39" target="_blank">GitHub</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <a href="https://yordanoshagos.netlify.app" target="_blank">yordanoshagos.netlify.app</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Ethiopia
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- :::::: BODY :::::: -->
+    <div class="body">
+      <!-- ---- MAIN COLUMN ---- -->
+      <div class="main">
+        <!-- PROFILE -->
+        <div class="section">
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="profile-text">
+            Frontend Developer and UI/UX Designer with full-stack capabilities and professional experience building AI-powered, production-ready web applications. Highly experienced in Vue.js, modern UI architecture, and responsive frontend development, with strong backend skills in NestJS and MongoDB. Designed fintech dashboards, rental platform systems, and developed an AI-integrated Adaptive Learning Platform aligned with the Ethiopian curriculum. Passionate about creating clean, scalable, and high-performance digital products.
+          </p>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="section">
+          <h2 class="section-title">Work Experience</h2>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">Full-Stack Developer (AI Integration)</span>
+              <span class="exp-date">Sep 2025 – Jan 2026</span>
+            </div>
+            <div class="exp-company">Vite Technologies</div>
+            <ul class="exp-details">
+              <li>Built an AI-powered Adaptive Learning Platform using Vue.js and NestJS for Ethiopian Grades 9–12</li>
+              <li>Integrated AI features including coaching assistant, automated Q&A generation, and lesson summarization via LLM APIs</li>
+              <li>Developed a curriculum-aligned system with grade-based routing, subject selection, and personalized learning paths</li>
+              <li>Implemented RESTful APIs and MongoDB for data persistence, user management, and session handling</li>
+              <li>Deployed the application to Netlify with CI/CD pipeline from GitHub</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">UI/UX Designer</span>
+              <span class="exp-date">Sep 2024 – Jun 2025</span>
+            </div>
+            <div class="exp-company">Vite Technologies</div>
+            <ul class="exp-details">
+              <li>Designed comprehensive payment gateway dashboards for fintech applications using Figma</li>
+              <li>Created rental platform systems with complete user flows, property listings, and booking interfaces</li>
+              <li>Built scalable design systems with reusable components, consistent typography, and color palettes</li>
+              <li>Ensured responsive designs across desktop, tablet, and mobile viewports</li>
+              <li>Collaborated closely with frontend developers to ensure pixel-perfect implementation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="section">
+          <h2 class="section-title">Featured Projects</h2>
+
+          <div class="project-item">
+            <div class="project-name">AI-Powered Adaptive Learning System</div>
+            <div class="project-tech-list">Vue.js · NestJS · MongoDB · AI / LLM Integration</div>
+            <p class="project-desc">
+              A production-ready learning platform for Ethiopian Grades 9–12 with AI coaching, automated Q&A generation, personalized lesson summaries, and curriculum-aligned content. Features responsive student dashboard, chat-based AI assistant, and exam center.
+            </p>
+          </div>
+
+          <div class="project-item">
+            <div class="project-name">Payment Gateway Dashboard UI</div>
+            <div class="project-tech-list">Figma · UI/UX Design · Dashboard Design</div>
+            <p class="project-desc">
+              A comprehensive fintech dashboard design with transaction tracking, analytics visualizations, merchant management, and payment method breakdowns. Focused on clean data presentation and scalable layout systems.
+            </p>
+          </div>
+
+          <div class="project-item">
+            <div class="project-name">Rental Platform Web Design</div>
+            <div class="project-tech-list">Figma · Responsive Web Design</div>
+            <p class="project-desc">
+              A modern rental marketplace UI with property listings, search filters, booking interface, and landlord/tenant dashboards. Focused on user flow optimization and clean UI structure.
+            </p>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="edu-degree">Bachelor of Science in Information Technology</div>
+          <div class="edu-school">Mekelle Institute of Technology</div>
+          <div class="edu-date">Expected Graduation: 2026</div>
+        </div>
+      </div>
+
+      <!-- ---- SIDEBAR ---- -->
+      <div class="sidebar">
+        <!-- TECHNICAL SKILLS -->
+        <div class="section">
+          <h2 class="section-title">Technical Skills</h2>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Frontend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Vue.js</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML / CSS</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Component Architecture</span>
+              <span class="skill-tag">REST API Integration</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Backend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">NestJS</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">AI Integration</div>
+            <div class="skill-tags">
+              <span class="skill-tag">LLM APIs</span>
+              <span class="skill-tag">RAG</span>
+              <span class="skill-tag">AI Coaching</span>
+              <span class="skill-tag">Q&A / Summarization</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title">Design</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">UI/UX Research</span>
+              <span class="skill-tag">Wireframing</span>
+              <span class="skill-tag">Design Systems</span>
+              <span class="skill-tag">Dashboard Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="section">
+          <h2 class="section-title">Tools</h2>
+          <div class="tools-list">
+            <span class="tool-tag">Git / GitHub</span>
+            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">Docker</span>
+            <span class="tool-tag">VS Code</span>
+            <span class="tool-tag">Netlify</span>
+            <span class="tool-tag">Postman</span>
+          </div>
+        </div>
+
+        <!-- SOFT SKILLS -->
+        <div class="section">
+          <h2 class="section-title">Soft Skills</h2>
+          <ul class="soft-skill-list">
+            <li>Problem Solving</li>
+            <li>Analytical Thinking</li>
+            <li>Team Collaboration</li>
+            <li>Attention to Detail</li>
+            <li>Adaptability</li>
+            <li>Continuous Learning</li>
+          </ul>
+        </div>
+
+        <!-- LANGUAGES -->
+        <div class="section">
+          <h2 class="section-title">Languages</h2>
+          <div class="lang-item">
+            <span>Tigrinya</span>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-item">
+            <span>Amharic</span>
+            <span class="lang-level">Fluent</span>
+          </div>
+          <div class="lang-item">
+            <span>English</span>
+            <span class="lang-level">Professional</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
